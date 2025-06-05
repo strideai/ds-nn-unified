@@ -1,0 +1,479 @@
+import os
+import re
+import zipfile
+import pythoncom
+import win32com.client
+import docx
+import pandas as pd
+from lxml import etree
+from pathlib import Path
+
+class UnifiedDocxExtractor:
+    def __init__(self, docx_path, abbr_reference_path=None):
+        self.docx_path = docx_path
+        self.abbr_reference_path = abbr_reference_path
+        self.results = {}
+
+    def run(self):
+        self._extract_headings_with_numbers()
+        self._extract_bullet_points()
+        self._extract_content_chunks()
+        self._extract_links_and_cross_references()
+        return self.results
+
+    def _clean_text(self, text):
+        """Remove illegal characters and clean text"""
+        if not text:
+            return ""
+        # Remove control characters, tabs, and page numbers
+        cleaned = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F\uF000-\uFFFF]', '', str(text))
+        # Remove tab characters and trailing page numbers
+        cleaned = re.sub(r'\t\d+$', '', cleaned)  
+        cleaned = re.sub(r'\t+', ' ', cleaned)    
+        return cleaned.strip()
+
+    def _extract_headings_with_numbers(self):
+        """Extract headings with improved detection and number extraction"""
+        pythoncom.CoInitialize()
+        word = None
+        doc = None
+        headings = []
+        
+        try:
+            word = win32com.client.Dispatch("Word.Application")
+            word.Visible = False
+            doc = word.Documents.Open(self.docx_path)
+            word.ActiveDocument.Repaginate()
+            
+            # Method 1: Extract from Word's built-in heading styles
+            for para in doc.Paragraphs:
+                try:
+                    style_name = para.Range.Style.NameLocal
+                    text = self._clean_text(para.Range.Text)
+                    
+                    if not text or len(text) < 2:
+                        continue
+                    
+                    # Check for heading styles
+                    is_heading = ('Heading' in style_name and 'Table' not in style_name)
+                    
+                    # Also check for numbered paragraphs that look like headings
+                    if not is_heading:
+                        # Look for patterns like "1. Purpose", "5.1. Strategy", etc.
+                        if re.match(r'^\d+(\.\d+)*\.\s+[A-Z]', text):
+                            is_heading = True
+                    
+                    if is_heading:
+                        heading_number = None
+                        heading_name = text
+                        
+                        # Extract heading number and name
+                        number_match = re.match(r'^(\d+(?:\.\d+)*)\.\s*(.+)', text)
+                        if number_match:
+                            heading_number = number_match.group(1)
+                            heading_name = self._clean_text(number_match.group(2))
+                            heading_name = re.sub(r'\s+\d+$', '', heading_name)
+
+                        
+                        # Get page number
+                        page_number = para.Range.Information(3)  # wdActiveEndPageNumber
+                        
+                        # Get font size with error handling
+                        try:
+                            font_size = para.Range.Font.Size
+                            if font_size and font_size > 100:  # Fix unrealistic font sizes
+                                font_size = 12  # Default reasonable size
+                        except:
+                            font_size = 'Unknown'
+                        
+                        headings.append({
+                            'Heading Number': heading_number,
+                            'Heading Name': heading_name,
+                            'Page No': page_number,
+                            'Font Size': font_size,
+                            'Style': style_name
+                        })
+                except Exception as e:
+                    continue
+            
+            # Method 2: Fallback - scan for numbered headings in all paragraphs
+            if len(headings) < 3:  # If we didn't find many headings, use fallback
+                for para in doc.Paragraphs:
+                    try:
+                        text = self._clean_text(para.Range.Text)
+                        if not text:
+                            continue
+                        
+                        # Look for numbered headings
+                        if re.match(r'^\d+(\.\d+)*\.\s+[A-Za-z]', text) and len(text) < 100:
+                            number_match = re.match(r'^(\d+(?:\.\d+)*)\.\s*(.+)', text)
+                            if number_match:
+                                heading_number = number_match.group(1)
+                                heading_name = self._clean_text(number_match.group(2))
+                                heading_name = re.sub(r'\s+\d+$', '', heading_name)
+                                page_number = para.Range.Information(3)
+                                
+                                try:
+                                    font_size = para.Range.Font.Size
+                                    if font_size and font_size > 100:
+                                        font_size = 12
+                                except:
+                                    font_size = 'Unknown'
+                                
+                                # Check if already exists
+                                exists = any(h['Heading Number'] == heading_number and 
+                                           h['Heading Name'] == heading_name for h in headings)
+                                
+                                if not exists:
+                                    headings.append({
+                                        'Heading Number': heading_number,
+                                        'Heading Name': heading_name,
+                                        'Page No': page_number,
+                                        'Font Size': font_size,
+                                        'Style': 'Detected Heading'
+                                    })
+                    except Exception:
+                        continue
+            
+            self.results['headings'] = headings
+            
+        except Exception as e:
+            print(f"Error extracting headings: {str(e)}")
+            self.results['headings'] = []
+        finally:
+            if doc is not None:
+                try:
+                    doc.Close(False)
+                except Exception:
+                    pass
+            if word is not None:
+                try:
+                    word.Quit()
+                except Exception:
+                    pass
+            pythoncom.CoUninitialize()
+
+    def _extract_bullet_points(self):
+        """Extract actual bullet symbols/characters and their levels - UPDATED"""
+        pythoncom.CoInitialize()
+        word = None
+        doc = None
+        bullets = []
+        try:
+            word = win32com.client.Dispatch("Word.Application")
+            word.Visible = False
+            doc = word.Documents.Open(self.docx_path)
+            word.ActiveDocument.Repaginate()
+            
+            for para in doc.Paragraphs:
+                try:
+                    text = self._clean_text(para.Range.Text)
+                    if not text or len(text) < 3:
+                        continue
+                    
+                    # Skip headings
+                    if re.match(r'^\d+(\.\d+)*\.\s+', text):
+                        continue
+                    
+                    # Extract only Word-recognized list items
+                    if para.Range.ListFormat.ListType > 0:
+                        bullet_symbol = para.Range.ListFormat.ListString.strip()
+                        level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
+                        page_number = para.Range.Information(3)
+                        
+                        bullets.append({
+                            'Bullet Point': bullet_symbol,
+                            'Bullet Point Text': text,
+                            'Level': level,
+                            'Page No': page_number
+                        })
+                        
+                except Exception as e:
+                    continue
+            
+            self.results['bullets'] = bullets
+            
+        except Exception as e:
+            print(f"Error extracting bullets: {str(e)}")
+            self.results['bullets'] = []
+        finally:
+            if doc is not None:
+                try:
+                    doc.Close(False)
+                except Exception:
+                    pass
+            if word is not None:
+                try:
+                    word.Quit()
+                except Exception:
+                    pass
+            pythoncom.CoUninitialize()
+
+
+    def _extract_content_chunks(self):
+        """Extract content chunks with better filtering"""
+        pythoncom.CoInitialize()
+        word = None
+        doc = None
+        chunks = []
+        
+        try:
+            word = win32com.client.Dispatch("Word.Application")
+            word.Visible = False
+            doc = word.Documents.Open(self.docx_path)
+            word.ActiveDocument.Repaginate()
+            
+            bullet_symbols = '•●◦▪–-→➤o'
+            
+            for para in doc.Paragraphs:
+                try:
+                    text = self._clean_text(para.Range.Text)
+                    if not text or len(text) < 10:
+                        continue
+                    
+                    style_name = para.Range.Style.NameLocal
+                    
+                    # Skip headings
+                    if ('Heading' in style_name or 
+                        re.match(r'^\d+(\.\d+)*\.\s+', text)):
+                        continue
+                    
+                    # Skip bullets (enhanced filtering)
+                    if ('List' in style_name or 'Bullet' in style_name or 
+                        (text and text[0] in bullet_symbols) or
+                        (text.startswith('\t') or text.startswith('    ')) or
+                        re.search(r'\[\d+\]$', text) or
+                        (text.lower().startswith('server') or 
+                         ('.' in text and text.count('.') >= 2 and len(text.split()) <= 3)) or
+                        any(text.lower().startswith(word) for word in ['it systems', 'it security', 'data integrity', 'infrastructure', 'ownership'])):
+                        continue
+                    
+                    # Skip TOC entries
+                    if re.match(r'^\d+(\.\d+)*\.\s*\w+\s*\d+$', text):
+                        continue
+                    
+                    # Skip very short content
+                    if len(text.split()) < 3:
+                        continue
+                    
+                    page_number = para.Range.Information(3)
+                    
+                    try:
+                        font_size = para.Range.Font.Size
+                        if font_size and font_size > 100:
+                            font_size = 10
+                    except:
+                        font_size = 'Unknown'
+                    
+                    chunks.append({
+                        'Content': text,
+                        'Page No': page_number,
+                        'Chunk': f"Paragraph on page {page_number}",
+                        'Font Size': font_size
+                    })
+                except Exception:
+                    continue
+            
+            self.results['content_chunks'] = chunks
+            
+        except Exception as e:
+            print(f"Error extracting content chunks: {str(e)}")
+            self.results['content_chunks'] = []
+        finally:
+            if doc is not None:
+                try:
+                    doc.Close(False)
+                except Exception:
+                    pass
+            if word is not None:
+                try:
+                    word.Quit()
+                except Exception:
+                    pass
+            pythoncom.CoUninitialize()
+
+    # def _extract_links_and_cross_references(self):
+    #     """Extract hyperlinks and cross-references with improved cleaning"""
+    #     pythoncom.CoInitialize()
+    #     word = None
+    #     doc = None
+    #     hyperlinks = []
+    #     cross_references = []
+        
+    #     try:
+    #         word = win32com.client.Dispatch("Word.Application")
+    #         word.Visible = False
+    #         doc = word.Documents.Open(self.docx_path)
+    #         word.ActiveDocument.Repaginate()
+            
+    #         # Extract hyperlinks with better filtering
+    #         seen_links = set()
+    #         if doc.Hyperlinks.Count > 0:
+    #             for hyperlink in doc.Hyperlinks:
+    #                 try:
+    #                     link_text = self._clean_text(hyperlink.TextToDisplay)
+    #                     address = hyperlink.Address if hyperlink.Address else f"Internal: {hyperlink.SubAddress}"
+    #                     page_number = hyperlink.Range.Information(3)
+                        
+    #                     # Better filtering for meaningful links
+    #                     if (not link_text or len(link_text) < 1 or 
+    #                         link_text.isspace() or link_text in ['\t', ' ']):
+    #                         continue
+                        
+    #                     # Create unique key
+    #                     link_key = (link_text, address, page_number)
+    #                     if link_key not in seen_links:
+    #                         seen_links.add(link_key)
+    #                         hyperlinks.append({
+    #                             "type": "Hyperlink",
+    #                             "page_number": page_number,
+    #                             "link_text": link_text,
+    #                             "target": self._clean_text(address)
+    #                         })
+    #                 except Exception:
+    #                     continue
+            
+    #         # Extract cross-references
+    #         for field in doc.Fields:
+    #             try:
+    #                 if field.Type == 3:  # wdFieldRef
+    #                     ref_text = self._clean_text(field.Result.Text)
+    #                     target_text = self._clean_text(field.Code.Text) if field.Code else "No target text"
+    #                     page_number = field.Code.Information(3) if field.Code else 1
+                        
+    #                     if ref_text and len(ref_text) > 0:
+    #                         cross_references.append({
+    #                             "type": "Cross-reference",
+    #                             "page_number": page_number,
+    #                             "ref_text": ref_text,
+    #                             "target_text": target_text
+    #                         })
+    #             except Exception:
+    #                 continue
+            
+    #         # Extract [n] style references
+    #         seen_refs = set()
+    #         for para in doc.Paragraphs:
+    #             try:
+    #                 text = para.Range.Text
+    #                 if text:
+    #                     ref_matches = re.findall(r'\[(\d+)\]', text)
+    #                     if ref_matches:
+    #                         page_number = para.Range.Information(3)
+    #                         for ref_num in ref_matches:
+    #                             ref_key = (ref_num, page_number)
+    #                             if ref_key not in seen_refs:
+    #                                 seen_refs.add(ref_key)
+    #                                 cross_references.append({
+    #                                     "type": "Cross-reference",
+    #                                     "page_number": page_number,
+    #                                     "ref_text": f"[{ref_num}]",
+    #                                     "target_text": f"Reference {ref_num}"
+    #                                 })
+    #             except Exception:
+    #                 continue
+            
+    #         self.results['hyperlinks'] = hyperlinks
+    #         self.results['cross_references'] = cross_references
+            
+    #     except Exception as e:
+    #         print(f"Error extracting links and references: {str(e)}")
+    #         self.results['hyperlinks'] = []
+    #         self.results['cross_references'] = []
+    #     finally:
+    #         if doc is not None:
+    #             try:
+    #                 doc.Close(False)
+    #             except Exception:
+    #                 pass
+    #         if word is not None:
+    #             try:
+    #                 word.Quit()
+    #             except Exception:
+    #                 pass
+    #         pythoncom.CoUninitialize()
+    def _extract_links_and_cross_references(self):
+        pythoncom.CoInitialize()
+        word = None
+        doc = None
+        try:
+            word = win32com.client.Dispatch("Word.Application")
+            word.Visible = False
+            doc = word.Documents.Open(self.docx_path)
+            doc.Repaginate()
+            
+            self.results['external_links'] = []
+            self.results['internal_links'] = []
+            
+            seen_internal = set()
+            seen_external = set()
+            
+            # Hyperlinks
+            for hyperlink in doc.Hyperlinks:
+                link_text = self._clean_text(hyperlink.TextToDisplay)
+                address = hyperlink.Address or ""
+                subaddress = hyperlink.SubAddress or ""
+                page = hyperlink.Range.Information(3)
+                
+                # External links
+                if address.lower().startswith(('http', 'https', 'www')):
+                    if not link_text.strip():
+                        link_text = address  # Use URL as fallback
+                    key = (link_text, address, page)
+                    if key not in seen_external:
+                        self.results['external_links'].append({
+                            "link_text": link_text,
+                            "page_number": page,
+                            "target": address
+                        })
+                        seen_external.add(key)
+                
+                # Internal links
+                elif subaddress:
+                    anchor = subaddress.replace("Internal: ", "")
+                    if link_text.strip():  # Only keep non-empty link_text
+                        key = (link_text, anchor, page)
+                        if key not in seen_internal:
+                            self.results['internal_links'].append({
+                                "link_text": link_text,
+                                "page_number": page,
+                                "target": anchor
+                            })
+                            seen_internal.add(key)
+            
+           # Cross-references 
+            cross_references = []
+            for field in doc.Fields:
+                if field.Type == 3:  # wdFieldRef (Cross-reference)
+                    ref_text = field.Result.Text
+                    target_text = field.Code.Text if field.Code else ""
+                    page_number = field.Code.Information(3) if field.Code else None
+                    cross_references.append({
+                        "type": "Cross-reference",
+                        "page_number": page_number,
+                        "ref_text": ref_text,
+                        "target_text": target_text
+                    })
+            self.results['cross_references'] = cross_references
+
+        except Exception as e:
+            print(f"Error extracting links/cross-references: {str(e)}")
+            self.results['cross_references'] = []
+        finally:
+            if doc is not None:
+                try:
+                    doc.Close(False)
+                except Exception:
+                    pass
+            if word is not None:
+                try:
+                    word.Quit()
+                except Exception:
+                    pass
+            pythoncom.CoUninitialize()
+# Example usage
+if __name__ == "__main__":
+    extractor = UnifiedDocxExtractor(r"C:\Users\HP\Desktop\Data\ds-nn-unified\Bullet points issue.docx")
+    results = extractor.run()
+    import pprint
+    pprint.pprint(results)
