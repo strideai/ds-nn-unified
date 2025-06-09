@@ -400,64 +400,62 @@ class UnifiedDocxExtractor:
             word = win32com.client.Dispatch("Word.Application")
             word.Visible = False
             doc = word.Documents.Open(self.docx_path)
-            doc.Repaginate()
-            
+            word.ActiveDocument.Repaginate()
+
             self.results['external_links'] = []
             self.results['internal_links'] = []
-            
-            seen_internal = set()
-            seen_external = set()
-            
-            # Hyperlinks
+            self.results['cross_references'] = []
+
+            #for hyperlinks
             for hyperlink in doc.Hyperlinks:
-                link_text = self._clean_text(hyperlink.TextToDisplay)
-                address = hyperlink.Address or ""
-                subaddress = hyperlink.SubAddress or ""
-                page = hyperlink.Range.Information(3)
-                
-                # External links
-                if address.lower().startswith(('http', 'https', 'www')):
-                    if not link_text.strip():
-                        link_text = address  # Use URL as fallback
-                    key = (link_text, address, page)
-                    if key not in seen_external:
-                        self.results['external_links'].append({
-                            "link_text": link_text,
-                            "page_number": page,
-                            "target": address
-                        })
-                        seen_external.add(key)
-                
-                # Internal links
-                elif subaddress:
-                    anchor = subaddress.replace("Internal: ", "")
-                    if link_text.strip():  # Only keep non-empty link_text
-                        key = (link_text, anchor, page)
-                        if key not in seen_internal:
-                            self.results['internal_links'].append({
-                                "link_text": link_text,
-                                "page_number": page,
-                                "target": anchor
-                            })
-                            seen_internal.add(key)
-            
-           # Cross-references 
-            cross_references = []
+                link_text = hyperlink.TextToDisplay
+                # If Address is present, it's an external link; otherwise, it's internal (bookmark/anchor)
+                if hyperlink.Address:
+                    address = hyperlink.Address
+                else:
+                    address = f"Internal: {hyperlink.SubAddress}" if hyperlink.SubAddress else ""
+                try:
+                    page_number = hyperlink.Range.Information(3)
+                except Exception:
+                    page_number = None
+
+                # External link: has an Address and is not a Word internal anchor
+                if hyperlink.Address and hyperlink.Address.lower().startswith(('http', 'https', 'www')):
+                    self.results['external_links'].append({
+                        "type": "Hyperlink",
+                        "page_number": page_number,
+                        "link_text": link_text,
+                        "target": address
+                    })
+                # Internal link: has SubAddress (bookmark/anchor)
+                elif hyperlink.SubAddress:
+                    self.results['internal_links'].append({
+                        "type": "Hyperlink",
+                        "page_number": page_number,
+                        "link_text": link_text,
+                        "target": address
+                    })
+
+            # for cross-references
             for field in doc.Fields:
                 if field.Type == 3:  # wdFieldRef (Cross-reference)
                     ref_text = field.Result.Text
-                    target_text = field.Code.Text if field.Code else ""
-                    page_number = field.Code.Information(3) if field.Code else None
-                    cross_references.append({
+                    target_text = field.Code.Text if field.Code else "No target text"
+                    try:
+                        page_number = field.Code.Information(3)
+                    except Exception:
+                        page_number = None
+                    self.results['cross_references'].append({
                         "type": "Cross-reference",
                         "page_number": page_number,
                         "ref_text": ref_text,
                         "target_text": target_text
                     })
-            self.results['cross_references'] = cross_references
 
         except Exception as e:
-            print(f"Error extracting links/cross-references: {str(e)}")
+            print(f"Error extracting links: {str(e)}")
+            self.results['external_links'] = []
+            self.results['internal_links'] = []
             self.results['cross_references'] = []
         finally:
             if doc is not None:
@@ -471,6 +469,7 @@ class UnifiedDocxExtractor:
                 except Exception:
                     pass
             pythoncom.CoUninitialize()
+
 # Example usage
 if __name__ == "__main__":
     extractor = UnifiedDocxExtractor(r"C:\Users\HP\Desktop\Data\ds-nn-unified\Bullet points issue.docx")

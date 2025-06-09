@@ -86,11 +86,11 @@ clean_results = clean_for_excel(results)
 import pprint
 pprint.pprint(clean_results)
 
-with open('results4.json', 'w', encoding='utf-8') as f:
+with open('Bulletissue.json', 'w', encoding='utf-8') as f:
     json.dump(clean_results, f, indent=2, ensure_ascii=False)
 
 try:
-    with pd.ExcelWriter('results4.xlsx', engine='openpyxl') as writer:
+    with pd.ExcelWriter('Bulletissue.xlsx', engine='openpyxl') as writer:
         # Headings
         if clean_results['headings']:
             pd.DataFrame(clean_results['headings']).to_excel(writer, sheet_name='Headings', index=False)
@@ -116,4 +116,4 @@ try:
 except Exception as e:
     print(f" Excel export error: {e}")
 
-print(" Final extraction complete! Check 'results4.json' and 'results4.xlsx'")
+print(" Final extraction complete! Check 'Bulletissue.json' and 'Bulletissue.xlsx'")
