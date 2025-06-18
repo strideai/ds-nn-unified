@@ -186,103 +186,63 @@ class UnifiedDocxExtractor:
                     pass
             pythoncom.CoUninitialize()
 
-    # def _extract_bullet_points(self):
-    #     """Extract actual bullet symbols/characters and their levels - UPDATED"""
-    #     pythoncom.CoInitialize()
-    #     word = None
-    #     doc = None
-    #     bullets = []
-    #     try:
-    #         word = win32com.client.Dispatch("Word.Application")
-    #         word.Visible = False
-    #         doc = word.Documents.Open(self.docx_path)
-    #         word.ActiveDocument.Repaginate()
+    def _extract_bullet_points(self):
+        """Extract actual bullet symbols/characters and their levels - UPDATED"""
+        pythoncom.CoInitialize()
+        word = None
+        doc = None
+        bullets = []
+        try:
+            word = win32com.client.Dispatch("Word.Application")
+            word.Visible = False
+            doc = word.Documents.Open(self.docx_path)
+            word.ActiveDocument.Repaginate()
             
-    #         for para in doc.Paragraphs:
-    #             try:
-    #                 text = self._clean_text(para.Range.Text)
-    #                 if not text or len(text) < 3:
-    #                     continue
+            for para in doc.Paragraphs:
+                try:
+                    text = self._clean_text(para.Range.Text)
+                    if not text or len(text) < 3:
+                        continue
                     
-    #                 # Skip headings
-    #                 if re.match(r'^\d+(\.\d+)*\.\s+', text):
-    #                     continue
+                    # Skip headings
+                    if re.match(r'^\d+(\.\d+)*\.\s+', text):
+                        continue
                     
-    #                 # Extract only Word-recognized list items
-    #                 if para.Range.ListFormat.ListType > 0:
-    #                     bullet_symbol = para.Range.ListFormat.ListString.strip()
-    #                     level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
-    #                     page_number = para.Range.Information(3)
+                    # Extract only Word-recognized list items
+                    if para.Range.ListFormat.ListType > 0:
+                        bullet_symbol = para.Range.ListFormat.ListString.strip()
+                        level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
+                        page_number = para.Range.Information(3)
                         
-    #                     bullets.append({
-    #                         'Bullet Point': bullet_symbol,
-    #                         'Bullet Point Text': text,
-    #                         'Level': level,
-    #                         'Page No': page_number
-    #                     })
+                        bullets.append({
+                            'Bullet Point': bullet_symbol,
+                            'Bullet Point Text': text,
+                            'Level': level,
+                            'Page No': page_number
+                        })
                         
-    #             except Exception as e:
-    #                 continue
-            
-    #         self.results['bullets'] = bullets
-            
-    #     except Exception as e:
-    #         print(f"Error extracting bullets: {str(e)}")
-    #         self.results['bullets'] = []
-    #     finally:
-    #         if doc is not None:
-    #             try:
-    #                 doc.Close(False)
-    #             except Exception:
-    #                 pass
-    #         if word is not None:
-    #             try:
-    #                 word.Quit()
-    #             except Exception:
-    #                 pass
-    #         pythoncom.CoUninitialize()
-    
-    def _extract_list_items(self, doc, constants):
-       
-        raw_bullet_data = []
-        indent_levels = set()
-
-        # First pass: Collect raw data and unique indent values
-        for p in doc.Paragraphs:
-            if p.Range.ListFormat.ListType in [2, 4]: # 2=bulleted, 4=mixed
-                bullet_symbol = p.Range.ListFormat.ListString.strip()
-                text = self._clean_text(p.Range.Text)
-
-                if not text or any(char.isdigit() for char in bullet_symbol):
+                except Exception as e:
                     continue
-
-                indent = p.Range.ParagraphFormat.LeftIndent
-                indent_levels.add(indent)
-                raw_bullet_data.append({
-                    "symbol": bullet_symbol,
-                    "text": text,
-                    "page_number": p.Range.Information(constants.wdActiveEndPageNumber),
-                    "font_name": p.Range.Font.Name,
-                    "indent": indent
-                })
-
-        # Create a mapping from indent value to level number
-        sorted_indents = sorted(list(indent_levels))
-        indent_to_level_map = {indent: i + 1 for i, indent in enumerate(sorted_indents)}
-
-        # Final pass: Assign the correct level and build the final output
-        final_bullet_points = []
-        for bullet in raw_bullet_data:
-            final_bullet_points.append({
-                "symbol": bullet["symbol"],
-                "level": indent_to_level_map.get(bullet["indent"]),
-                "text": bullet["text"],
-                "page_number": bullet["page_number"],
-                "font_name": bullet["font_name"]
-            })
             
-        return final_bullet_points
-
+            self.results['bullets'] = bullets
+            
+        except Exception as e:
+            print(f"Error extracting bullets: {str(e)}")
+            self.results['bullets'] = []
+        finally:
+            if doc is not None:
+                try:
+                    doc.Close(False)
+                except Exception:
+                    pass
+            if word is not None:
+                try:
+                    word.Quit()
+                except Exception:
+                    pass
+            pythoncom.CoUninitialize()
+    
+    
 
 
     def _extract_content_chunks(self):
