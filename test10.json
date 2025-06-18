@@ -1,0 +1,2824 @@
+{
+  "headings": [
+    {
+      "Heading Number": null,
+      "Heading Name": "Scope",
+      "Page No": 1,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Applies to",
+      "Page No": 1,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Table of Contents",
+      "Page No": 2,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": "1",
+      "Heading Name": "Functional Areas",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "2",
+      "Heading Name": "Allocation of Local Reference Number",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "3",
+      "Heading Name": "Reporting of ICSRs to LHAs",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "4",
+      "Heading Name": "Aggregated Reporting to LHAs",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "5",
+      "Heading Name": "Adverse Drug Reporting in Clinical Trials",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "6",
+      "Heading Name": "Reporting of Risk Management Plans",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "7",
+      "Heading Name": "Reporting of Signals",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "8",
+      "Heading Name": "Educational Materials in Oman",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "9",
+      "Heading Name": "Direct Healthcare Professional Communication in Oman",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": "10",
+      "Heading Name": "Handling of SDEAs",
+      "Page No": 2,
+      "Font Size": 10.0,
+      "Style": "TOC 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Functional Areas",
+      "Page No": 3,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Pharmacovigilance",
+      "Page No": 3,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Project Owner/DH Manager",
+      "Page No": 5,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Regulatory Department",
+      "Page No": 6,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Medical Department",
+      "Page No": 7,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "BAMEAC Care Hub",
+      "Page No": 7,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Sales Team and All Employees",
+      "Page No": 9,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Allocation of Local Reference Number",
+      "Page No": 13,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Reporting of ICSRs to LHAs",
+      "Page No": 14,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Reporting to Oman Authorities",
+      "Page No": 14,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Reporting to Kuwait Authorities",
+      "Page No": 14,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Reporting to Yemen Authorities",
+      "Page No": 14,
+      "Font Size": 12.0,
+      "Style": "Heading 2"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Aggregated Reporting to LHAs",
+      "Page No": 14,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Adverse Drug Reporting in Clinical Trials",
+      "Page No": 15,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Reporting of Risk Management Plans",
+      "Page No": 15,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Reporting of Signals",
+      "Page No": 15,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Educational Materials in Oman",
+      "Page No": 15,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Direct Healthcare Professional Communication in Oman",
+      "Page No": 16,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Handling of SDEAs",
+      "Page No": 16,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Abbreviations",
+      "Page No": 17,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Definitions",
+      "Page No": 18,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Appendix 1: Call for Reporting",
+      "Page No": 22,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Appendix 2: Educational Materials in Oman",
+      "Page No": 23,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Appendix 3: Submission of Educational Materials in Oman",
+      "Page No": 28,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Appendix 4: Guidelines for DHPCs in Oman",
+      "Page No": 30,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    },
+    {
+      "Heading Number": null,
+      "Heading Name": "Appendix 5: Submission of DHPCs in Oman",
+      "Page No": 36,
+      "Font Size": 13.0,
+      "Style": "Heading 1"
+    }
+  ],
+  "bullets": [
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensures compliance with this procedure.",
+      "Level": 2,
+      "Page No": 1
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensures that there is a person appointed at all times having the responsibility for handling customer complaints, adverse events and other safety information and Local health authority pharmacovigilance requirements.",
+      "Level": 2,
+      "Page No": 1
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensures compliance with this procedure.",
+      "Level": 2,
+      "Page No": 1
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensure to assign back-up for the activities during absence of QPPV.",
+      "Level": 2,
+      "Page No": 1
+    },
+    {
+      "Bullet Point": "1.",
+      "Bullet Point Text": "Functional Areas",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "1.1",
+      "Bullet Point Text": "Pharmacovigilance",
+      "Level": 3,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Check NNGCSAFETY mailboxes for reports of adverse events, safety information, customer complaints and other relevant information.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "In case of receiving reports by email, email communications must be archived along with case records on CCGloW.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Check CCGloW to make sure that all cases in registration phase are routed forward to evaluation and investigation.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Allocate a local reference number to customer complaints and safety information as per section 2 upon receipt.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "After allocating local reference number, report information to relevant GS departments within timelines specified in [‎Handling of Adverse Events and Other Safety Information - Q014048].",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Forward samples (if available) as per [‎Transport and storage of Customer Complaint samples - Q145509].",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensure reasonable effort to obtain follow-up information which should, if possible, include a written (including email) request for information.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Make at least two attempts to obtain the requested information. However, for expected/anticipated non-serious cases it is accepted to make only one attempt, unless the event is part of a RMP commitment.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The two attempts should, as a general rule, be made within 60 calendar days after date of receipt of the Safety Information.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Add CCGloW ID in the subject of follow-up emails for traceability.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Check relevant CCGloW views for pending customer complaint actions.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Perform screening for daily case safety lists sent to NNGCSAFETY mailbox.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Follow up with global safety to make sure that local cases reported to global safety are processed timely.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Evaluate daily case safety lists sent to NNGCSAFETY mailbox and submit reportable cases to local authorities in a timely manner as applicable according to local requirements described in section 3.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Perform screening for daily case safety lists sent to NNGCSAFETY mailbox.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Evaluate daily case safety lists sent to NNGCSAFETY mailbox and submit reportable clinical trial cases to local authorities in a timely manner as applicable according to local requirements described in section 5.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Timely update of C-track on monthly bases for ICSRs and SUSARs. Snure ProOps.",
+      "Level": 2,
+      "Page No": 3
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Report PSURs to local authorities in a timely manner as applicable according to local requirements described in section 4 .",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Submit updated RMPs (where applicable) to relevant local authorities as per requirements in section 6",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Submit all periodic reports for clinical trials as required by regulatory requirements as described in section 5.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Establish a documented up-to-date overview of local medical literature and their frequency of publishing and send it to GS for review on annual basis. This overview must be updated immediately upon identification of any new local literature.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Survey local literature that are not in English for any relevant customer complaints or safety information or information that might affect risk/benefit evaluation of any NN products and report them according to [‎Handling of Adverse Events and Other Safety Information - Q014048] or any applicable local requirement.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Document review process using literature review form [Handling of Adverse Events and Other Safety Information - Q014048] and [Medical Literature Review Form - Q172022].",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Monitor the local health authority websites monthly for new local information concerning signals, recalls and adverse drug reactions as per SOP [Affiliate responsibilities in relation to Safety Surveillance HQ processes - Q105982].",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensure the monitoring is documented.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Monitor local health authorities’ websites for capturing of new PV requirements as per [Monitoring of External Requirements in Novo Nordisk Gulf - Q0362913].",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Where the regulatory update is communicated by local authorities, HALOPV system must be updated with the new requirements (when applicable) in a timely manner after the requirement has been communicated by a health authority as per [‎Handling of Adverse Events and Other Safety Information - Q014048].",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Any exception/additional information provided by LHA must also be included in the HALOPV.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Communicate to Local Safety Responsible in Oman any newly captured PV requirements.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Filing and archiving all relevant documentation.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Train employees on safety reporting and PV matters.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Respond to any inquiries from local authorities within timelines.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensure agents used for CEPs are properly assessed/audited and trained as per [Handling of Safety Requirements in Customer Engagement Programmes & Digital Health Activities- Q185348].",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Review EURD list on a monthly basis.",
+      "Level": 2,
+      "Page No": 4
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Ensure timely update of the SDEAs with the distributors, timely completion of periodic training and timely reconciliation as per the SDEA.",
+      "Level": 2,
+      "Page No": 5
+    },
+    {
+      "Bullet Point": "1.2",
+      "Bullet Point Text": "Project Owner/DH Manager",
+      "Level": 3,
+      "Page No": 5
+    },
+    {
+      "Bullet Point": "1.3",
+      "Bullet Point Text": "Regulatory Department",
+      "Level": 3,
+      "Page No": 6
+    },
+    {
+      "Bullet Point": "1.4",
+      "Bullet Point Text": "Medical Department",
+      "Level": 3,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All medical enquiries UndadaaABCDADriver should be handled as soon as possible.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Any identified safety information must be reported as per section 1.6.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Kindly refer to section 9.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Kindly refer to section 10.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "1.5",
+      "Bullet Point Text": "BAMEAC Care Hub",
+      "Level": 3,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Log case on IO CCS and transfer to CCGloW.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Affiliate PV and/or external partner (Delta PV) will send the CCGloW case ID to Medical Educators for follow-up purposes.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medical Educators will add the CCGloW case ID email to the case in IO CCS as supporting documents.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "When Affiliate PV and/or external partner (Delta PV) receives follow-up questions from Global Safety, they will email to Medical Educator.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medical Educator will call the consenting customer to obtain responses to follow-up information.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Follow-up information will be logged by Medical Educator on IO CCS and transferred to 6473 - Xjdjs-T CCGloW.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medical Educator will log in the complaint via IO CCS and transfer to CCGloW.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medical Educator to ask the patient to give the sample to the pharmacist from where it was purchased.",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The nominated medical representative to do a physical troubleshooting for the sample as per [Customer Service and Logging of Customer Contacts - Q139798].",
+      "Level": 2,
+      "Page No": 7
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If the issue is resolved, inform the Affiliate PV responsible.",
+      "Level": 3,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If not, the sample must be sent to the complaint center CC",
+      "Level": 3,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The sample replacement to be decided based on the sales manager’s discretion.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Affiliate PV and/or external partner (Delta PV team) will pick up the case from CCglow and process it.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Affiliate PV team and/or external partner (Delta PV team) will share CCGloW reference no. with Medical Educator via email.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "For any follow-up questions, external partner (Delta PV team) will email to Medical Educator.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medical Educator will call customer to get responses to follow-up information and log on IO CCS.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "For samples, medical educator will ask for consent to collect sample and provide information to Affiliate PV and/or external partner (Delta PV team) via IO CCS and safety mailbox: NNGCsafety@novonordisk.com.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Follow up with the nominated medical representative to ensure that the technical complaint sample is collected.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Whenever product information needs to be used BAMEAC CareHub team to get the updated leaflets/product information from Gulf medical SharePoint page and start using it as soon as available.",
+      "Level": 2,
+      "Page No": 8
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The process shall follow [Handling of Adverse Events and Other Safety Information Q014048] and this procedure.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Based on the number of customer contacts received per Quarter, Team Leader from BAMEAC CareHub must send a sample size report to Gulf Affiliate designate as per SOP Q014048 - Appendix 1: Sample size for Data Entry Verification and Quality Control of logged Customer Contacts in the first week of the following Quarter. For example, if it is QC of Q1, then send a sample size report in the first week of April.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Affiliate designate will perform QC and if any concerns arise, these will be raised with the Team Leader from BAMEAC CareHub.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Team Leader from BAMEAC CareHub will be responsible to take any necessary actions and perform corrective actions in alignment with the Pharmacovigilance responsible in Gulf Affiliate.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "1.6",
+      "Bullet Point Text": "Sales Team and All Employees",
+      "Level": 3,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "1.",
+      "Bullet Point Text": "The data will be forwarded to PV department in Novo Nordisk Gulf.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "2.",
+      "Bullet Point Text": "All reports are confidential and are stored in safety database(In case the reporter declines use of his/her personal data, remove data that can identify the reporter from the form before sending the form).",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "3.",
+      "Bullet Point Text": "Local NN PV department might send some follow-up questions.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "4.",
+      "Bullet Point Text": "If patient is the reporter, ask for permission to contact prescribing physician.",
+      "Level": 2,
+      "Page No": 9
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Serious outcomes, for example, sudden death.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All reports relating to pregnancies, including outcome of a pregnancy, where the foetus may have been exposed to a drug product through parental exposure.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Any AE occurring in infants following exposure to a drug product from breastfeeding.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Reports of lack of efficacy.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Any suspected transmission of an infectious agent via drug product.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All reports of Overdose, Drug Abuse, Drug Misuse and Occupational Exposure.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All reports of Medication Errors.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All device failures with NN devices or the device part of marketed drug-device combination products, which could have led to death or serious deterioration in the state of health, even if in the actual situation nothing happened.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Product defects that didn’t lead to an adverse event(e.g., cracks, precipitate, stuck piston).",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Off-label use without an associated AE is not considered as Safety Information and, e.g.,",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "In case of technical complaint where a customer complaint sample was available, the nominated medical representative to do a physical troubleshooting for the sample as per Q139798 Customer Service and Logging of Customer Contacts.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If the issue is resolved, inform the Affiliate PV responsible.",
+      "Level": 3,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If not, the sample must be sent to the complaint center CC",
+      "Level": 3,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "In Kuwait, the PV Affiliate responsible will send the samples to complaint center.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Yemen, PV department to align with local distributor, where applicable.",
+      "Level": 2,
+      "Page No": 10
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "In the rest of Gulf countries, the medical representative will send the sample to Global Safety by aligning with PV Affiliate responsible and by following [Transport and storage of customer complaint samples -  Q145509].",
+      "Level": 2,
+      "Page No": 11
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Proper care and attention should be exercised when unwrapping customer complaint samples as they might contain sharp objects such as needles or broken glass.",
+      "Level": 2,
+      "Page No": 11
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "In order to make a full investigation, complaint samples must be forwarded to CCC in the state they are received: they must not be subject to any further handling such as turning the dose selector dial or depressing the push button. The only 2 exceptions to this are as follows:",
+      "Level": 2,
+      "Page No": 11
+    },
+    {
+      "Bullet Point": "1.",
+      "Bullet Point Text": "Sharp objects: When a needle is attached to a pen and the cap is missing, or when a vial/cartridge is broken. For such complaint samples containing sharp objects, put the entire sample in a suitable plastic container.",
+      "Level": 3,
+      "Page No": 11
+    },
+    {
+      "Bullet Point": "2.",
+      "Bullet Point Text": "Durable devices: If the packaging material is received, enter the batch number from the packaging material in the case. If the packaging material is not received, turn the dose selector of the pen to see the batch number engraved and enter it in the case. Turn the dose selector back to the 0 position for safe transportation.",
+      "Level": 3,
+      "Page No": 11
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Do not try to determine/trouble-shoot if there is something wrong with the product. All complaint samples returned to Novo Nordisk must be evaluated according to the scope section of [Handling Customer Complaints - Q008782], as to whether they are related to a customer complaint or not.",
+      "Level": 2,
+      "Page No": 11
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If possible, place a sticker with the CCGloW number directly on the object. Avoid placing the sticker where it might impede investigation: avoid covering the batch number, expiry date or scale drum. Also avoid placing the sticker on loose parts such as the cap or the joint between pen and cap.",
+      "Level": 2,
+      "Page No": 12
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If the complaint case involves more than one sample, place all samples together in a resealable bag or hold them together with an elastic band, if possible. Customer Complaint Center CCC discards other materials used to hold samples together like paper envelopes etc. Write the complaint case no. on the bag or attach a CCGloW complaint no.",
+      "Level": 2,
+      "Page No": 12
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "If the reporter returned the sample(s) to Novo Nordisk in a refrigerated state, the sample(s) must be further sent in a refrigerated state. Otherwise, send the sample(s) in a cardboard box or jiffy bag.",
+      "Level": 2,
+      "Page No": 12
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Generally, take action to return collected samples to CCC at least once every 7 calendar days.",
+      "Level": 2,
+      "Page No": 12
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Samples received from the reporter in a refrigerated state must be forwarded in a refrigerated state to CCC on the same day as received or the next workday.",
+      "Level": 2,
+      "Page No": 12
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Senders and receivers of samples should consider establishing a receipt system with the shipment company to document pick-up and delivery of samples",
+      "Level": 2,
+      "Page No": 12
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Samples to be sent to CCC should be labelled as follows:",
+      "Level": 2,
+      "Page No": 13
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "For more information, please revert back to [Transport and storage of Customer Complaint samples - Q145509].",
+      "Level": 2,
+      "Page No": 13
+    },
+    {
+      "Bullet Point": "2.",
+      "Bullet Point Text": "Allocation of Local Reference Number",
+      "Level": 2,
+      "Page No": 13
+    },
+    {
+      "Bullet Point": "3.",
+      "Bullet Point Text": "Reporting of ICSRs to LHAs",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "3.1",
+      "Bullet Point Text": "Reporting to Oman Authorities",
+      "Level": 3,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Only Adverse Reactions occurring within Oman and their follow-up info regardless of source, seriousness and expectedness are reportable.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Timelines:",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "o",
+      "Bullet Point Text": "Serious cases: within maximum 15 days of knowledge.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "o",
+      "Bullet Point Text": "Non-serious cases: within maximum 90 days of knowledge.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "3.2",
+      "Bullet Point Text": "Reporting to Kuwait Authorities",
+      "Level": 3,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The submission of any documents to Kuwait authorities will be through NN distributor in Kuwait.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All serious Adverse Reactions occurring within Kuwait should be reported within 15 days.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All non-serious Adverse Reactions occurring within Kuwait should be reported within 90 days.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "3.3",
+      "Bullet Point Text": "Reporting to Yemen Authorities",
+      "Level": 3,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The submission of any documents to Yemen authorities will be through NN distributor in Yemen.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All serious Adverse Reactions occurring within Yemen should be reported within 15 days.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All non-serious Adverse Reactions occurring within Yemen should be reported within 90 days.",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "4.",
+      "Bullet Point Text": "Aggregated Reporting to LHAs",
+      "Level": 2,
+      "Page No": 14
+    },
+    {
+      "Bullet Point": "5.",
+      "Bullet Point Text": "Adverse Drug Reporting in Clinical Trials",
+      "Level": 2,
+      "Page No": 15
+    },
+    {
+      "Bullet Point": "a)",
+      "Bullet Point Text": "Fatal or Life-Threatening Unexpected ADRs:",
+      "Level": 2,
+      "Page No": 15
+    },
+    {
+      "Bullet Point": "b)",
+      "Bullet Point Text": "All Other Serious, Unexpected FSOdrain ADRs",
+      "Level": 2,
+      "Page No": 15
+    },
+    {
+      "Bullet Point": "6.",
+      "Bullet Point Text": "Reporting of Risk Management Plans",
+      "Level": 2,
+      "Page No": 15
+    },
+    {
+      "Bullet Point": "7.",
+      "Bullet Point Text": "Reporting of Signals",
+      "Level": 2,
+      "Page No": 15
+    },
+    {
+      "Bullet Point": "8.",
+      "Bullet Point Text": "Educational Materials in Oman",
+      "Level": 2,
+      "Page No": 15
+    },
+    {
+      "Bullet Point": "9.",
+      "Bullet Point Text": "Direct Healthcare Professional Communication in Oman",
+      "Level": 2,
+      "Page No": 16
+    },
+    {
+      "Bullet Point": "10.",
+      "Bullet Point Text": "Handling of SDEAs",
+      "Level": 2,
+      "Page No": 16
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Literature reporting responsibility.",
+      "Level": 2,
+      "Page No": 16
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Safety reporting timelines aligned to Global SOP.",
+      "Level": 2,
+      "Page No": 16
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Reconciliation of safety reports.",
+      "Level": 2,
+      "Page No": 16
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The use of the NN product within the terms of the marketing authorisation.",
+      "Level": 2,
+      "Page No": 18
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "The use of the NN product outside the terms of the marketing authorisation, including overdose, off-label use, misuse, abuse and medication errors.",
+      "Level": 2,
+      "Page No": 18
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Occupational exposure.",
+      "Level": 2,
+      "Page No": 18
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medication errors associated with an adverse drug reaction(s).",
+      "Level": 2,
+      "Page No": 19
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Medication errors without an adverse drug reaction(s).",
+      "Level": 2,
+      "Page No": 19
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Intercepted medication errors (‘near miss’): this scenario applies when an intervention caused a break in the chain of events in the treatment process before reaching the patient which would have resulted in a ‘potential’ ADR. This intervention has prevented actual harm being caused to the patient, e.g., a wrongly prepared medicine was actually not administered to the patient because the error was noticed by the nurse.",
+      "Level": 2,
+      "Page No": 19
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Serious outcomes, e.g., sudden death.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All reports relating to pregnancies, including outcome of a pregnancy, where the foetus may have been exposed to a drug product through parental exposure.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Any adverse event occurring in infants following exposure to a drug product from breastfeeding.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Reports of lack of efficacy.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Any suspected transmission of an infectious agent via drug product.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All reports of overdose, drug abuse, drug misuse and occupational exposure.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All reports of medication errors.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "All device failures with Novo Nordisk devices or the device part of marketed drug-device combination products, which could have led to death or serious deterioration in the state of health, even if in the actual situation nothing happened.",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Death",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Life-threatening experience",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Inpatient Hospitalisation or prolongation of existing Hospitalisation",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "A persistent or significant disability/incapacity or is a congenital anomaly/birth defect",
+      "Level": 2,
+      "Page No": 20
+    },
+    {
+      "Bullet Point": "",
+      "Bullet Point Text": "Important medical events that may not result in death, be life-threatening, or require Hospitalisation may be considered a Serious Adverse event when, based upon appropriate medical judgement, they may jeopardise the patient or subject or require medical or surgical intervention to prevent one of the outcomes listed in this definition. Suspicion of transmission of infectious agents must always be considered an SAE.",
+      "Level": 2,
+      "Page No": 20
+    }
+  ],
+  "content_chunks": [
+    {
+      "Content": "Reporting of Customer Complaints and Safety Information in Novo Nordisk Gulf Cluster",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 20.0
+    },
+    {
+      "Content": "This procedure describes how to handle customer complaints and safety information received by Novo Nordisk (NN) Gulf employees in compliance with NN procedures ‎[Handling of Adverse Events and Other Safety Information - Q014048], [‎Transport and storage of Customer Complaint samples - Q145509], [Medical Literature Review Form - Q172022], [Handling of Safety Requirements in Customer Engagement Programmes & Digital Health Activities - Q185348],[Managing Pharmacovigilance Agreements - Q205877] and [Handling of customer complaints - Q051200],[Customer Service and Logging of Customer Contacts - Q139798] and reporting of safety information and customer complaints from clinical trials and post marketing studies sponsored by NN to global safety which are handled according to [‎Reporting of Adverse Events and Pregnancies - Q110034] and [‎How to Handle Safety Information from Clinical Investigations - Q0309869].",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10
+    },
+    {
+      "Content": "Affiliate General Manager:",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensures compliance with this procedure.",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensures that there is a person appointed at all times having the responsibility for handling customer complaints, adverse events and other safety information and Local health authority pharmacovigilance requirements.",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensures compliance with this procedure.",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensure to assign back-up for the activities during absence of QPPV.",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Click on your functional area to be directed to parts of the SOP relevant to you.",
+      "Page No": 1,
+      "Chunk": "Paragraph on page 1",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Applies to 1",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Table of Contents 2",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "1.1 Pharmacovigilance 3",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "1.2 Project Owner/DH Manager 5",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "1.3 Regulatory Department 7",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "1.4 Medical Department 8",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "1.5 BAMEAC Care Hub 8",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "1.6 Sales Team and All Employees 10",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "3.1 Reporting to Oman Authorities 16",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "3.2 Reporting to Kuwait Authorities 16",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "3.3 Reporting to Yemen Authorities 16",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Appendix 1: Call for Reporting 26",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Appendix 2: Educational Materials in Oman 27",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Appendix 3: Submission of Educational Materials in Oman 32",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Appendix 4: Guidelines for DHPCs in Oman 34",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Appendix 5: Submission of DHPCs in Oman 40",
+      "Page No": 2,
+      "Chunk": "Paragraph on page 2",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "QPPV and/or External Partner",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Capturing of customer complaints, Adverse Events and Other Safety Information.",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "QPPV and/or External Partner",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Correct handling and reporting of customer complaints, adverse events and safety information effectively and timely to GS.",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "QPPV and/or External Partner",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensure fulfilling follow-up requirements.",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "QPPV and/or External partner",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Respond to complaint actions in CC glow.",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensuring timely submission of local cases to local health authorities (Timely reporting to local authorities).",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensuring timely submission of clinical trial cases to relevant LHA where applicable.",
+      "Page No": 3,
+      "Chunk": "Paragraph on page 3",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Reporting of PSURs and safety signals to local authorities.",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Submit RMP updates.",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Reporting of DSURs to local authorities where applicable",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "QPPV and/or External Partner",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Surveillance of local literature",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "QPPV and/or external partner",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Monitor the local health authority websites monthly for new local information.",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Monitor local health authorities’ websites.",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Update HALOPV system with new requirements in a timely manner.",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Capturing new requirements in Oman.",
+      "Page No": 4,
+      "Chunk": "Paragraph on page 4",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Customer Engagement Programs",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Handling of safety information in customer engagement programmes and managing safety agreements must be performed in accordance with the global procedures GO NDB [Handling of Safety Requirements in Customer Engagement Programmes & Digital Health Activities- Q185348], [Managing Pharmacovigilance agreements- Q205877].",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10
+    },
+    {
+      "Content": "If a SDEA is needed, please follow [Managing Pharmacovigilance agreements- Q205877] locate the suitable SDEA template, draft SDEA and share it with safety department for review.",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10
+    },
+    {
+      "Content": "Obtain signature on SDEA from the Third-party PV responsible first then Gulf PV department.",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensure Safety training is performed by Gulf PV responsible and share the certificates with PV department before start of project.",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensure SDEA is in place before project starts and archive the SDEA in Coupa.",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Register the project as soon as possible in HaloPV and update when applicable.",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Project owner must ensure that reconciliation or confirmation process must be performed to ensure that all Safety Information forwarded to the relevant Gulf PV department has also been received by the relevant NN PV department.",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Ensure timely implementation of safety updates",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Promotional materials in Oman",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Handling of SDEAs",
+      "Page No": 5,
+      "Chunk": "Paragraph on page 5",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Report any identified customer complaints or safety information received from HCPs and patients or local authorities to safety department on time",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "To know how to report click the yellow arrow to go to chapter 1.6",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Notify Safety Department upon registration or deregistration of medicinal products or devices.",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Notify relevant departments about approval of safety updates.",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Notify Safety department about PSUR, RMP and signals updates.",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Report any identified customer complaints or safety information received from HCPs, patients or local authorities to Safety department on time.",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "To know how to report click the yellow arrow to go to chapter 1.6.",
+      "Page No": 6,
+      "Chunk": "Paragraph on page 6",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Customer Engagement Programs, non-interventional studies.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Direct healthcare professional communication in Oman.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Handling of SDEAs.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Report any identified customer complaints or safety information received from HCPs, patients or local authorities to Safety department on time.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "To know how to report click the yellow arrow to go to chapter 1.6.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Receiving adverse events and safety information.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Medical Educator to follow the below steps:",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Log case on IO CCS and transfer to CCGloW.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Receiving technical complaints.",
+      "Page No": 8,
+      "Chunk": "Paragraph on page 8",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Medical Educators will guide the patient on the right use of the product and understand the customer’s technical complaint.",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.5
+    },
+    {
+      "Content": "If the problem is not solved:",
+      "Page No": 7,
+      "Chunk": "Paragraph on page 7",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If the issue is resolved, inform the Affiliate PV responsible.",
+      "Page No": 8,
+      "Chunk": "Paragraph on page 8",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If not, the sample must be sent to the complaint center CC",
+      "Page No": 8,
+      "Chunk": "Paragraph on page 8",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Additional info: Technical complaint received via BAMEAC Carehub will be archived on IOCCS, notification email that the case has been pushed to CCGloW will go to NNGCsafety and/or Affiliate PV and External partner (Delta PV) e-mails and the same process of adverse events and safety information handling should be followed.",
+      "Page No": 8,
+      "Chunk": "Paragraph on page 8",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Receiving updated leaflets and product information.",
+      "Page No": 8,
+      "Chunk": "Paragraph on page 8",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Sending sample size report for the purpose of QC for Customer Contacts on IO CCS.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Receiving customer complaints or safety information.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "When any safety information or customer complaint is reported to you, collect as much info as possible.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "After getting available info about the case, inform the reporter about the following:",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "The data will be forwarded to PV department in Novo Nordisk Gulf.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "All reports are confidential and are stored in safety database(In case the reporter declines use of his/her personal data, remove data that can identify the reporter from the form before sending the form).",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Local NN PV department might send some follow-up questions.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If patient is the reporter, ask for permission to contact prescribing physician.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Report customer complaints and safety information.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Send case details via safety App to nngcsafety@novonordisk.com.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Or inform PV 728-NU-2822 Kahe Gabanafr department",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Do not wait till you are able to collect all information. Report whatever info you acquired.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Cases where patient has already recovered from the event are still to be reported.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Always check your outbox to make sure the email left outbox to “sent” folder before logging-off.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Contact PV department in case you don’t receive a confirmation of receipt of the sent email within one business day.",
+      "Page No": 9,
+      "Chunk": "Paragraph on page 9",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Report within timelines",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Important: Timelines apply for both initial and follow-up info. This means that when you receive answers to follow-up questions, they need to be reported to safety department within same timelines.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Send complaint samples within 7 calendar days of receiving the sample",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "(Continued next page)",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Below information should be reported immediately or maximum within 24 hours of knowledge, e.g.:",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Serious outcomes, for example, sudden death.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "All reports relating to pregnancies, including outcome of a pregnancy, where the foetus may have been exposed to a drug product through parental exposure.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any AE occurring in infants following exposure to a drug product from breastfeeding.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Reports of lack of efficacy.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any suspected transmission of an infectious agent via drug product.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "All reports of Overdose, Drug Abuse, Drug Misuse and Occupational Exposure.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "All reports of Medication Errors.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "All device failures with NN devices or the device part of marketed drug-device combination products, which could have led to death or serious deterioration in the state of health, even if in the actual situation nothing happened.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Product defects that didn’t lead to an adverse event(e.g., cracks, precipitate, stuck piston).",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Off-label use without an associated AE is not considered as Safety Information and, e.g.,",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "sales representatives and medical staff is not actively soliciting this information. However, if off-label use without associated AE is reported to the affiliate PV department via any source or identified in the literature, it must be reported to GS in the same manner as Safety Information",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Note: For Parallel trade, diversion and counterfeit, please refer to [How to handle suspected counterfeit, diverted products, and IP infringement in customer complaints - Q168018].",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10
+    },
+    {
+      "Content": "Complaint Sample(s) handling",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If the issue is resolved, inform the Affiliate PV responsible.",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If not, the sample must be sent to the complaint center CC",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Sample collection will be PV department responsibility:",
+      "Page No": 10,
+      "Chunk": "Paragraph on page 10",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "For Technical Complaints and AEs where samples are available,",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Handling sharp objects: Consider wearing protective gloves when handling customer complaint samples.",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Removal of needles. Use a needle remover or tweezers to handle needles. It should never be necessary to touch any part of a needle.",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Sharp objects: When a needle is attached to a pen and the cap is missing, or when a vial/cartridge is broken. For such complaint samples containing sharp objects, put the entire sample in a suitable plastic container.",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Durable devices: If the packaging material is received, enter the batch number from the packaging material in the case. If the packaging material is not received, turn the dose selector of the pen to see the batch number engraved and enter it in the case. Turn the dose selector back to the 0 position for safe transportation.",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If the product has been returned to a Novo Nordisk employee:",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If the product is still in the possession of the reporter and has not been returned to Novo Nordisk yet:",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Trouble-shoot can be performed with the reporter. An example could be to ask the reporter to try a pen with a new needle.",
+      "Page No": 11,
+      "Chunk": "Paragraph on page 11",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "If the reporter returned the sample(s) to Novo Nordisk in a refrigerated state, the sample(s) must be further sent in a refrigerated state. Otherwise, send the sample(s) in a cardboard box or jiffy bag.",
+      "Page No": 12,
+      "Chunk": "Paragraph on page 12",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Enclose the shipping list printed from CCGloW or note the shipping list number on a piece of paper and place together with the samples in the cardboard box or jiffy bag.",
+      "Page No": 12,
+      "Chunk": "Paragraph on page 12",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Generally, take action to return collected samples to CCC at least once every 7 calendar days.",
+      "Page No": 12,
+      "Chunk": "Paragraph on page 12",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Samples received from the reporter in a refrigerated state must be forwarded in a refrigerated state to CCC on the same day as received or the next workday.",
+      "Page No": 12,
+      "Chunk": "Paragraph on page 12",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Senders and receivers of samples should consider establishing a receipt system with the shipment company to document pick-up and delivery of samples",
+      "Page No": 12,
+      "Chunk": "Paragraph on page 12",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Samples to be sent to CCC should be labelled as follows:",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Customer Complaint Center",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Novo Nordisk A/S",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Report within timelines",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Important: Timelines apply for both initial and follow-up info. This means that when you receive answers to follow-up questions, they need to be reported to quality department within same timelines.",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Send complaint samples within 7 calendar days of receiving the sample.",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "To assign a local reference number to the complaint, use the following format:",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "NNGC/CTY/CC or SI/YYYYMMDD-0xx",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "CTY = Country",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "CC = Customer complaint",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "SI = Safety Information",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "YYYYMMDD = Year/month/day",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "0XX = serial number of complaint within a given area in a given year",
+      "Page No": 13,
+      "Chunk": "Paragraph on page 13",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "The submission of any PV document for Omani MOH must be through MOH online portal: https://www.moh.gov.om/en",
+      "Page No": 14,
+      "Chunk": "Paragraph on page 14",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Required ICSRs for registered medicines:",
+      "Page No": 14,
+      "Chunk": "Paragraph on page 14",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "PSURs submissions shall be based on EURD reference list.",
+      "Page No": 14,
+      "Chunk": "Paragraph on page 14",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "PSURs submissions shall be based on EURD reference list.",
+      "Page No": 14,
+      "Chunk": "Paragraph on page 14",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "PSURs submissions shall be based on EURD reference list.",
+      "Page No": 14,
+      "Chunk": "Paragraph on page 14",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Expedited reporting to regulatory authorities of Oman of all adverse drug reactions (ADRs) that are both serious unexpected.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "The sponsor should submit to the drug control department all safety updates and all periodic reports as required by applicable regulatory requirements.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Fatal or life-threatening, unexpected ADRs occurring in clinical investigations qualify for very rapid reporting. Regulatory authorities should be notified as soon as possible but no later than 7 calendar days after first knowledge by the sponsor that a case qualifies, followed by as complete a report as possible within 8 additional calendar days.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Upon receiving notification from RA department about an update of RMP, the updated RMP should be submitted to LHAs in Kuwait, Oman and Yemen.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any signals received for registered products in Kuwait, Oman and Yemen should be submitted to LHAs in the countries as soon as possible.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any educational material/ brochures/ pamphlets with information on any medicinal product registered or available in Oman, to be distributed to the healthcare professionals/patients/public has to get prior approval of the draft from Oman ministry of Health and should only be disseminated after approval by the DPV&DI (Appendix 1, Appendix 2, Appendix 3 and Appendix 5).",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10
+    },
+    {
+      "Content": "Online submission through ehealth portal by the product manager.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Product managers should keep track of submission and approval of educational materials in Oman.",
+      "Page No": 15,
+      "Chunk": "Paragraph on page 15",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Direct healthcare professional communication (DHPC) needs to get prior approval from Oman MOH PV department.",
+      "Page No": 16,
+      "Chunk": "Paragraph on page 16",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Online submission through ehealth portal by medical team by aligning with PV department and by implementing the requirements in (Appendix 4) and (Appendix 5).",
+      "Page No": 16,
+      "Chunk": "Paragraph on page 16",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "To ensure that all SDEAs are updated to the latest version on timely manner.",
+      "Page No": 16,
+      "Chunk": "Paragraph on page 16",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "To highlight the implementation of certain clauses of SDEA agreements.",
+      "Page No": 16,
+      "Chunk": "Paragraph on page 16",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Update of product list as per current GVD-S market status.",
+      "Page No": 16,
+      "Chunk": "Paragraph on page 16",
+      "Font Size": 10
+    },
+    {
+      "Content": "Customer Engagement Program",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Direct Healthcare Professional Communication",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Development Safety Update Reports",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Health Care Professional",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Individual case safety reports",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Local Health Authority",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Local Safety Responsible",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Patient Support Program",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Periodic Safety Updates Reports",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Qualified Person for Pharmacovigilance",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Risk Management Plan",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Suspected Unexpected Serious Adverse Reactions",
+      "Page No": 17,
+      "Chunk": "Paragraph on page 17",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "This list contains definitions of abbreviations and terms used in this document.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Adverse Event (AE)",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any untoward medical occurrence in a patient or clinical investigation subject administered/using a Product and which does not necessarily have to have a causal relationship with this treatment.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "An Adverse Event can therefore be any unfavourable and unintended sign (including an abnormal laboratory finding), symptom, or disease temporally associated with the use of a Product, whether or not considered related to the Product.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Note: An Adverse Event may be associated with the use of a drug, a Medical Device or both.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Adverse Reaction (AR)",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "An Adverse Reaction is a response to a medicinal product which is noxious and unintended. This includes Adverse Reactions which arise from:",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Note: An Adverse Reaction may be associated with the use of a drug or a Medical Device or both.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "For solicited cases: An Adverse Reaction is an Adverse Event for which the causal relationship between the Product and the Adverse Event is suspected, i.e. judged possible or probable by either NN or the reporter.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "For unsolicited directly received cases: Even if the relationship is unknown or unstated by reporter, it meets the definition of an adverse reaction. Therefore, all spontaneous reports notified by Health Care Professionals, patients or Consumers are considered Adverse Reactions, since they convey the suspicions of the primary sources, unless the reporters specifically state that they believe the events to be unrelated or that a causal relationship can be excluded.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "An organization or person received products provided by Novo Nordisk. Includes direct customers, importing distributors, wholesalers, hospitals, pharmacies and end users.",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any written, electronic, or oral communication that alleges deficiencies related to the identity, quality, durability, reliability, labelling, actions, safety, effectiveness, or performance of a Product (medicine or device) after it is released for distribution (placed on a market or used in a Clinical Trial).",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Complaints include report of suspected Adverse Reactions, alleged product defects and combinations thereof. Product inquiries are not Complaints\".",
+      "Page No": 18,
+      "Chunk": "Paragraph on page 18",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Direct Healthcare Professional Communication (DHPC)",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "A communication intervention by which important safety information is delivered directly to individual healthcare professionals by a marketing authorization holder (MAH), to inform them of the need to take certain actions or adapt their practices in relation to a medicinal product.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Healthcare professional (HCP)",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Medically qualified persons, such as physicians, dentists, pharmacists, nurses and coroners.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Note: A pharmacist technician/assistant is not a Health Care Professional, however the technician may call on behalf of a pharmacist.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "A medication error is an unintended failure in the drug treatment process that leads to, or has the potential to lead to, harm to the patient.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Note: A failure in the drug treatment process does not refer to lack of efficacy of the drug, rather to human or process mediated failures.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Details of types of medication error and examples are given below:",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Potential medication errors: this is the recognition of circumstances that could lead to a medication error and may or may not involve a patient. The term potential medication error refers to all possible mistakes in the prescribing, storing, dispensing, preparation for administration or administration of a medicinal product by all persons who are involved in the medication process. An example is a pharmacist who noticed that the names of two medicines are similar and could clearly lead to product name confusion, but no patient was actually involved or has taken the medicine.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "An exposure to a medicinal product, as a result of one’s professional or non-professional occupation. It does not include the exposure to one of the ingredients during the manufacturing process before the release as finished product.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "A use that fails to comply with the currently approved Labelling of products. This relates to situations where the medicinal product is intentionally used for a medical purpose.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Post Authorization Safety Study",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "A Non-Interventional Study or a Clinical Trial relating to anauthorised medicinal Product conducted with the aim of identifying characterising or quantifying a safety hazard, confirming the safety profile of the medicinal Product or measuring the effectiveness of a risk management measure.",
+      "Page No": 19,
+      "Chunk": "Paragraph on page 19",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Non-fulfilment of a requirement related to an intended or specified use of a product.",
+      "Page No": 20,
+      "Chunk": "Paragraph on page 20",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "All reports of Adverse Events occurring during the use of a Novo Nordisk product.",
+      "Page No": 20,
+      "Chunk": "Paragraph on page 20",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "In addition, Safety Information includes any of the following information relevant to the safety of the Novo Nordisk product:",
+      "Page No": 20,
+      "Chunk": "Paragraph on page 20",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Serious Adverse Event (SAE)",
+      "Page No": 20,
+      "Chunk": "Paragraph on page 20",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "A Serious Adverse event is an experience that at any dose results in any of the following:",
+      "Page No": 20,
+      "Chunk": "Paragraph on page 20",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Note: The term life-threatening in the definition of serious refers to an event in which the patient was at risk of death at the time of the event. It does not refer to an event, which hypothetically might have caused death if it was more severe.",
+      "Page No": 20,
+      "Chunk": "Paragraph on page 20",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Information arising from one or multiple sources, including observations",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "and experiments, which suggests a new potentially causal association, or a new aspect of a",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "known association, between an intervention and an event or set of related events, either",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "adverse or beneficial, that is judged to be of sufficient likelihood to justify verificatory action.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Solicited adverse event report",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Reports derived from organized data collection systems, which include, e.g., clinical trials, Non-Interventional Studies, Registries, and surveys of patients or healthcare providers. For the purposes of safety reporting, solicited reports should be handled as Non-Interventional Study reports, and therefore should have an appropriate causality assessment by NN and if possible, by the reporter.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Sources of Safety Information",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "The information may be obtained or otherwise received by Novo Nordisk from any source, foreign or domestic, including information derived from any clinical or epidemiological investigations, animal investigations, commercial marketing experience, reports in the scientific literature, and unpublished scientific papers, as well as reports from regulatory authorities and the internet.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "An individual, a company including local affiliate, an institution, or an organization which takes responsibility for the initiation, management and/or financing of a clinical trial.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Spontaneous AE report",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "See Unsolicited adverse event report.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any written, electronic or oral communication that alleges Product (medicine or device) defects. The Technical Complaint may be associated with an Adverse Event but does not concern the Adverse Event itself.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Unsolicited adverse event report",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "Any spontaneous communication to a company, Regulatory Authority or other organization that describes one or more adverse events in a patient given one or more products which does not derive from a study or any organized data collection scheme. Cases of adverse events from the medical and scientific literature, including relevant published abstracts from meetings might qualify for reporting. Unsolicited reports from the internet shall also qualify for reporting. For the purpose of reporting the criteria for a valid report apply.",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "A case which contains information on an identifiable reporter, suspected product, adverse event, and identifiable patient (as recognized by, e.g., sex, age group, date of birth or initials).",
+      "Page No": 21,
+      "Chunk": "Paragraph on page 21",
+      "Font Size": 10.0
+    },
+    {
+      "Content": "*Kindly refer to Appendix 1 for the updated call for reporting details.",
+      "Page No": 35,
+      "Chunk": "Paragraph on page 35",
+      "Font Size": 10.0
+    }
+  ],
+  "external_links": [
+    {
+      "type": "Hyperlink",
+      "page_number": 14,
+      "link_text": "https://www.moh.gov.om/en",
+      "target": "https://www.moh.gov.om/en"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 15,
+      "link_text": "https://www.moh.gov.om/en",
+      "target": "https://www.moh.gov.om/en"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 15,
+      "link_text": "",
+      "target": "https://moh.gov.om/en/web/guest/-32?p_p_id=adverseDrugReaction_WAR_ehealthportaldrugcontrolportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_adverseDrugReaction_WAR_ehealthportaldrugcontrolportlet_view=&_adverseDrugReaction_WAR_ehealthportaldrugcontrolportlet_messageType=alert+alert-info&_adverseDrugReaction_WAR_ehealthportaldrugcontrolportlet_message=This+is+to+acknowledge+your+submission.%3Cbr%2F%3ESubmission+Type+%3A+PBRER%3Cbr%2F%3EProduct+Name+%3A+Xultophy%3Cbr%2F%3ESubmission+Date+%3A+14%2F11%2F2019%3Cbr%2F%3EWe+will+revert+to+you+shortly+with+our+comments%2C+or+any+additional+information."
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 16,
+      "link_text": "https://www.moh.gov.om/en",
+      "target": "https://www.moh.gov.om/en"
+    }
+  ],
+  "internal_links": [
+    {
+      "type": "Hyperlink",
+      "page_number": null,
+      "link_text": "",
+      "target": "Internal: _Quality_and_PV"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613671"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613672"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613673"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613674"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613675"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613676"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613677"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613678"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613679"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613680"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613681"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613682"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613683"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613684"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613685"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613686"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613687"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613688"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613689"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613690"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613691"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613692"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613693"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613694"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613695"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613696"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613697"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613698"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 2,
+      "link_text": "",
+      "target": "Internal: _Toc183613699"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 3,
+      "link_text": "section 2",
+      "target": "Internal: _Allocation_of_Local"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 3,
+      "link_text": "section 3",
+      "target": "Internal: _Reporting_of_ICSRs"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 3,
+      "link_text": "section 5",
+      "target": "Internal: _Adverse_drug_reporting"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 4,
+      "link_text": "section 4",
+      "target": "Internal: _Aggregated_Reporting_to"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 4,
+      "link_text": "section 6",
+      "target": "Internal: _Reporting_of_Risk"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 4,
+      "link_text": "section 5",
+      "target": "Internal: _Adverse_drug_reporting"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 5,
+      "link_text": "section 8",
+      "target": "Internal: _Educational_materials_in"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 5,
+      "link_text": "section 10",
+      "target": "Internal: _Handling_of_SDEAs"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": null,
+      "link_text": "",
+      "target": "Internal: _Sales_Team,_Call"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": null,
+      "link_text": "",
+      "target": "Internal: _Sales_Team,_Call"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 7,
+      "link_text": "section 1.6",
+      "target": "Internal: _Sales_Team_&"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 7,
+      "link_text": "section 9",
+      "target": "Internal: _Direct_Healthcare_Professional"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 7,
+      "link_text": "section 10",
+      "target": "Internal: _Handling_of_SDEAs"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": null,
+      "link_text": "",
+      "target": "Internal: _Sales_Team,_Call"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 15,
+      "link_text": "Appendix",
+      "target": "Internal: _Appendix_1_1"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 15,
+      "link_text": "Appendix 2",
+      "target": "Internal: _Appendix_2_1"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 15,
+      "link_text": "Appendix 3",
+      "target": "Internal: _Appendix_3_1"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 15,
+      "link_text": "Appendix 5",
+      "target": "Internal: _Appendix_5_1"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 16,
+      "link_text": "Appendix 4",
+      "target": "Internal: _Appendix_4_1"
+    },
+    {
+      "type": "Hyperlink",
+      "page_number": 16,
+      "link_text": "Appendix 5",
+      "target": "Internal: _Appendix_5_1"
+    }
+  ],
+  "cross_references": []
+}

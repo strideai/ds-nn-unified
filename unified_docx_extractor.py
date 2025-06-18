@@ -5,6 +5,7 @@ import pythoncom
 import win32com.client
 import docx
 import pandas as pd
+import time
 from lxml import etree
 from pathlib import Path
 
@@ -15,10 +16,41 @@ class UnifiedDocxExtractor:
         self.results = {}
 
     def run(self):
+        # self._extract_headings_with_numbers()
+        # self._extract_bullet_points()
+        # self._extract_content_chunks()
+        # self._extract_links_and_cross_references()
+        # return self.results
+        print("Starting extraction...")
+        start_time = time.time()
+
+        print("Extracting headings...")
+        t1 = time.time()
         self._extract_headings_with_numbers()
+        t2 = time.time()
+        print(f"Headings extracted in {t2 - t1:.2f} seconds")
+
+        print("Extracting bullet points...")
+        t3 = time.time()
         self._extract_bullet_points()
+        t4 = time.time()
+        print(f"Bullets extracted in {t4 - t3:.2f} seconds")
+
+        print("Extracting content chunks...")
+        t5 = time.time()
         self._extract_content_chunks()
+        t6 = time.time()
+        print(f"Content chunks extracted in {t6 - t5:.2f} seconds")
+
+        print("Extracting links and cross-references...")
+        t7 = time.time()
         self._extract_links_and_cross_references()
+        t8 = time.time()
+        print(f"Links and cross-references extracted in {t8 - t7:.2f} seconds")
+
+        total_time = time.time() - start_time
+        print(f"Total extraction time: {total_time:.2f} seconds")
+        print("Extraction complete.\n")
         return self.results
 
     def _clean_text(self, text):
@@ -31,6 +63,7 @@ class UnifiedDocxExtractor:
         cleaned = re.sub(r'\t\d+$', '', cleaned)  
         cleaned = re.sub(r'\t+', ' ', cleaned)    
         return cleaned.strip()
+    
 
     def _extract_headings_with_numbers(self):
         """Extract headings with improved detection and number extraction"""
@@ -153,61 +186,103 @@ class UnifiedDocxExtractor:
                     pass
             pythoncom.CoUninitialize()
 
-    def _extract_bullet_points(self):
-        """Extract actual bullet symbols/characters and their levels - UPDATED"""
-        pythoncom.CoInitialize()
-        word = None
-        doc = None
-        bullets = []
-        try:
-            word = win32com.client.Dispatch("Word.Application")
-            word.Visible = False
-            doc = word.Documents.Open(self.docx_path)
-            word.ActiveDocument.Repaginate()
+    # def _extract_bullet_points(self):
+    #     """Extract actual bullet symbols/characters and their levels - UPDATED"""
+    #     pythoncom.CoInitialize()
+    #     word = None
+    #     doc = None
+    #     bullets = []
+    #     try:
+    #         word = win32com.client.Dispatch("Word.Application")
+    #         word.Visible = False
+    #         doc = word.Documents.Open(self.docx_path)
+    #         word.ActiveDocument.Repaginate()
             
-            for para in doc.Paragraphs:
-                try:
-                    text = self._clean_text(para.Range.Text)
-                    if not text or len(text) < 3:
-                        continue
+    #         for para in doc.Paragraphs:
+    #             try:
+    #                 text = self._clean_text(para.Range.Text)
+    #                 if not text or len(text) < 3:
+    #                     continue
                     
-                    # Skip headings
-                    if re.match(r'^\d+(\.\d+)*\.\s+', text):
-                        continue
+    #                 # Skip headings
+    #                 if re.match(r'^\d+(\.\d+)*\.\s+', text):
+    #                     continue
                     
-                    # Extract only Word-recognized list items
-                    if para.Range.ListFormat.ListType > 0:
-                        bullet_symbol = para.Range.ListFormat.ListString.strip()
-                        level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
-                        page_number = para.Range.Information(3)
+    #                 # Extract only Word-recognized list items
+    #                 if para.Range.ListFormat.ListType > 0:
+    #                     bullet_symbol = para.Range.ListFormat.ListString.strip()
+    #                     level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
+    #                     page_number = para.Range.Information(3)
                         
-                        bullets.append({
-                            'Bullet Point': bullet_symbol,
-                            'Bullet Point Text': text,
-                            'Level': level,
-                            'Page No': page_number
-                        })
+    #                     bullets.append({
+    #                         'Bullet Point': bullet_symbol,
+    #                         'Bullet Point Text': text,
+    #                         'Level': level,
+    #                         'Page No': page_number
+    #                     })
                         
-                except Exception as e:
+    #             except Exception as e:
+    #                 continue
+            
+    #         self.results['bullets'] = bullets
+            
+    #     except Exception as e:
+    #         print(f"Error extracting bullets: {str(e)}")
+    #         self.results['bullets'] = []
+    #     finally:
+    #         if doc is not None:
+    #             try:
+    #                 doc.Close(False)
+    #             except Exception:
+    #                 pass
+    #         if word is not None:
+    #             try:
+    #                 word.Quit()
+    #             except Exception:
+    #                 pass
+    #         pythoncom.CoUninitialize()
+    
+    def _extract_list_items(self, doc, constants):
+       
+        raw_bullet_data = []
+        indent_levels = set()
+
+        # First pass: Collect raw data and unique indent values
+        for p in doc.Paragraphs:
+            if p.Range.ListFormat.ListType in [2, 4]: # 2=bulleted, 4=mixed
+                bullet_symbol = p.Range.ListFormat.ListString.strip()
+                text = self._clean_text(p.Range.Text)
+
+                if not text or any(char.isdigit() for char in bullet_symbol):
                     continue
+
+                indent = p.Range.ParagraphFormat.LeftIndent
+                indent_levels.add(indent)
+                raw_bullet_data.append({
+                    "symbol": bullet_symbol,
+                    "text": text,
+                    "page_number": p.Range.Information(constants.wdActiveEndPageNumber),
+                    "font_name": p.Range.Font.Name,
+                    "indent": indent
+                })
+
+        # Create a mapping from indent value to level number
+        sorted_indents = sorted(list(indent_levels))
+        indent_to_level_map = {indent: i + 1 for i, indent in enumerate(sorted_indents)}
+
+        # Final pass: Assign the correct level and build the final output
+        final_bullet_points = []
+        for bullet in raw_bullet_data:
+            final_bullet_points.append({
+                "symbol": bullet["symbol"],
+                "level": indent_to_level_map.get(bullet["indent"]),
+                "text": bullet["text"],
+                "page_number": bullet["page_number"],
+                "font_name": bullet["font_name"]
+            })
             
-            self.results['bullets'] = bullets
-            
-        except Exception as e:
-            print(f"Error extracting bullets: {str(e)}")
-            self.results['bullets'] = []
-        finally:
-            if doc is not None:
-                try:
-                    doc.Close(False)
-                except Exception:
-                    pass
-            if word is not None:
-                try:
-                    word.Quit()
-                except Exception:
-                    pass
-            pythoncom.CoUninitialize()
+        return final_bullet_points
+
 
 
     def _extract_content_chunks(self):
@@ -471,8 +546,8 @@ class UnifiedDocxExtractor:
             pythoncom.CoUninitialize()
 
 # Example usage
-if __name__ == "__main__":
-    extractor = UnifiedDocxExtractor(r"C:\Users\HP\Desktop\Data\ds-nn-unified\Bullet points issue.docx")
-    results = extractor.run()
-    import pprint
-    pprint.pprint(results)
+# if __name__ == "__main__":
+#     extractor = UnifiedDocxExtractor(r"C:\Users\HP\Desktop\StrideAi\ds-nn-unified\Test5_PKBW.docx")
+#     results = extractor.run()
+#     import pprint
+#     pprint.pprint(results)

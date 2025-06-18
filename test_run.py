@@ -78,42 +78,42 @@ def clean_for_excel(data):
     else:
         return data
 
-extractor = UnifiedDocxExtractor(r"C:\Users\HP\Desktop\Data\ds-nn-unified\Bullet points issue.docx")
+extractor = UnifiedDocxExtractor(r"C:\Users\HP\Desktop\StrideAi\ds-nn-unified\Test5_PKBW.docx")
 results = extractor.run()
 
 clean_results = clean_for_excel(results)
 
-import pprint
-pprint.pprint(clean_results)
+# import pprint
+# pprint.pprint(clean_results)
 
-with open('Bulletissue.json', 'w', encoding='utf-8') as f:
+with open('test5.json', 'w', encoding='utf-8') as f:
     json.dump(clean_results, f, indent=2, ensure_ascii=False)
 
-try:
-    with pd.ExcelWriter('Bulletissue.xlsx', engine='openpyxl') as writer:
-        # Headings
-        if clean_results['headings']:
-            pd.DataFrame(clean_results['headings']).to_excel(writer, sheet_name='Headings', index=False)
+# try:
+#     with pd.ExcelWriter('Bulletissue.xlsx', engine='openpyxl') as writer:
+#         # Headings
+#         if clean_results['headings']:
+#             pd.DataFrame(clean_results['headings']).to_excel(writer, sheet_name='Headings', index=False)
         
-        # Bullets
-        if clean_results['bullets']:
-            pd.DataFrame(clean_results['bullets']).to_excel(writer, sheet_name='Bullets', index=False)
+#         # Bullets
+#         if clean_results['bullets']:
+#             pd.DataFrame(clean_results['bullets']).to_excel(writer, sheet_name='Bullets', index=False)
         
-        # Content Chunks
-        if clean_results['content_chunks']:
-            pd.DataFrame(clean_results['content_chunks']).to_excel(writer, sheet_name='Content Chunks', index=False)
+#         # Content Chunks
+#         if clean_results['content_chunks']:
+#             pd.DataFrame(clean_results['content_chunks']).to_excel(writer, sheet_name='Content Chunks', index=False)
         
-        # Hyperlinks
-        if clean_results['hyperlinks']:
-            pd.DataFrame(clean_results['hyperlinks']).to_excel(writer, sheet_name='Hyperlinks', index=False)
+#         # Hyperlinks
+#         if clean_results['hyperlinks']:
+#             pd.DataFrame(clean_results['hyperlinks']).to_excel(writer, sheet_name='Hyperlinks', index=False)
         
-        # Cross References
-        if clean_results['cross_references']:
-            pd.DataFrame(clean_results['cross_references']).to_excel(writer, sheet_name='Cross References', index=False)
+#         # Cross References
+#         if clean_results['cross_references']:
+#             pd.DataFrame(clean_results['cross_references']).to_excel(writer, sheet_name='Cross References', index=False)
     
-    print(" Excel file created successfully!")
+#     print(" Excel file created successfully!")
     
-except Exception as e:
-    print(f" Excel export error: {e}")
+# except Exception as e:
+#     print(f" Excel export error: {e}")
 
-print(" Final extraction complete! Check 'Bulletissue.json' and 'Bulletissue.xlsx'")
+print(" Final extraction complete! Check 'test5.json' and 'test5.xlsx'")
