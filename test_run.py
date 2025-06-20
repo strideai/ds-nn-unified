@@ -86,7 +86,7 @@ clean_results = clean_for_excel(results)
 # import pprint
 # pprint.pprint(clean_results)
 
-with open('Bulletissue.json', 'w', encoding='utf-8') as f:
+with open('Bulletissue_1.json', 'w', encoding='utf-8') as f:
     json.dump(clean_results, f, indent=2, ensure_ascii=False)
 
 # try:
@@ -116,4 +116,4 @@ with open('Bulletissue.json', 'w', encoding='utf-8') as f:
 # except Exception as e:
 #     print(f" Excel export error: {e}")
 
-print(" Final extraction complete! Check 'Bulletissue.json' and 'test5.xlsx'")
+print(" Final extraction complete! Check 'Bulletissue_1.json' and 'test5.xlsx'")

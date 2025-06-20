@@ -8,7 +8,7 @@ import pandas as pd
 import time
 from lxml import etree
 from pathlib import Path
-
+ 
 class UnifiedDocxExtractor:
     def __init__(self, docx_path, abbr_reference_path=None):
         self.docx_path = docx_path
@@ -186,46 +186,146 @@ class UnifiedDocxExtractor:
                     pass
             pythoncom.CoUninitialize()
 
+    # def _extract_bullet_points(self):
+    #     """Extract actual bullet symbols/characters and their levels - UPDATED"""
+    #     pythoncom.CoInitialize()
+    #     word = None
+    #     doc = None
+    #     bullets = []
+    #     try:
+    #         word = win32com.client.Dispatch("Word.Application")
+    #         word.Visible = False
+    #         doc = word.Documents.Open(self.docx_path)
+    #         word.ActiveDocument.Repaginate()
+            
+    #         for para in doc.Paragraphs:
+    #             try:
+    #                 text = self._clean_text(para.Range.Text)
+    #                 if not text or len(text) < 3:
+    #                     continue
+                    
+    #                 # Skip headings
+    #                 if re.match(r'^\d+(\.\d+)*\.\s+', text):
+    #                     continue
+                    
+    #                 # Extract only Word-recognized list items
+    #                 if para.Range.ListFormat.ListType > 0:
+    #                     bullet_symbol = para.Range.ListFormat.ListString.strip()
+    #                     level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
+    #                     page_number = para.Range.Information(3)
+                        
+    #                     bullets.append({
+    #                         'Bullet Point': bullet_symbol,
+    #                         'Bullet Point Text': text,
+    #                         'Level': level,
+    #                         'Page No': page_number
+    #                     })
+                        
+    #             except Exception as e:
+    #                 continue
+            
+    #         self.results['bullets'] = bullets
+            
+    #     except Exception as e:
+    #         print(f"Error extracting bullets: {str(e)}")
+    #         self.results['bullets'] = []
+    #     finally:
+    #         if doc is not None:
+    #             try:
+    #                 doc.Close(False)
+    #             except Exception:
+    #                 pass
+    #         if word is not None:
+    #             try:
+    #                 word.Quit()
+    #             except Exception:
+    #                 pass
+    #         pythoncom.CoUninitialize()
+    
     def _extract_bullet_points(self):
-        """Extract actual bullet symbols/characters and their levels - UPDATED"""
+        """Extract and validate bullet points using managers logic."""
+        # Bullet symbol mappings and expected levels
+        BULLET_FONT_MAP = {
+            61623: '•',
+            9679: "•",
+            8226: '•',  # Filled round bullet (•)
+            8229: '▪',  # Filled square bullet (▪)
+            10003: '✔',  # Check mark (✔)
+            9675: '○',  # Hollow circle bullet (○)
+            61607: '',  # Square bullet ()
+            61692: '',
+            61656: '',  # Checkmark ()
+            111: 'o'
+        }
+        EXPECTED_BULLETS = {
+            1: ['•'],
+            2: ['○', 'o'],
+            3: ['▪', ''],
+        }
+
         pythoncom.CoInitialize()
         word = None
         doc = None
-        bullets = []
+        bullet_points = []
         try:
             word = win32com.client.Dispatch("Word.Application")
             word.Visible = False
             doc = word.Documents.Open(self.docx_path)
             word.ActiveDocument.Repaginate()
-            
+
+            expected_bullet_chars = {symbol for lvl in EXPECTED_BULLETS for symbol in EXPECTED_BULLETS[lvl]}
+            check_list = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+
             for para in doc.Paragraphs:
-                try:
+                bullet_marker = None
+                level = None
+
+                # Native bullet list
+                if para.Range.ListFormat.ListType in [2, 4]:
+                    bullet_marker = para.Range.ListFormat.ListString.strip()
+                    if any(item in bullet_marker for item in check_list):
+                        bullet_marker = None
+                    else:
+                        level = para.Range.ListFormat.ListLevelNumber
+                else:
+                    # Manual bullet: check if first char is a known bullet
                     text = self._clean_text(para.Range.Text)
-                    if not text or len(text) < 3:
-                        continue
-                    
-                    # Skip headings
-                    if re.match(r'^\d+(\.\d+)*\.\s+', text):
-                        continue
-                    
-                    # Extract only Word-recognized list items
-                    if para.Range.ListFormat.ListType > 0:
-                        bullet_symbol = para.Range.ListFormat.ListString.strip()
-                        level = para.Range.ListFormat.ListLevelNumber + 1  # 1-based index
-                        page_number = para.Range.Information(3)
-                        
-                        bullets.append({
-                            'Bullet Point': bullet_symbol,
-                            'Bullet Point Text': text,
-                            'Level': level,
-                            'Page No': page_number
+                    if text and text[0] in expected_bullet_chars:
+                        bullet_marker = text[0]
+                        if any(item in bullet_marker for item in check_list):
+                            bullet_marker = None
+                        else:
+                            level = 1  # Manual bullets default to level 1
+
+                if bullet_marker:
+                    try:
+                        ascii_value = ord(bullet_marker)
+                    except Exception:
+                        ascii_value = None
+
+                    # Use mapping if available
+                    if ascii_value is not None and ascii_value in BULLET_FONT_MAP:
+                        bullet_symbol_ascii = BULLET_FONT_MAP[ascii_value]
+                    else:
+                        bullet_symbol_ascii = bullet_marker
+
+                    text = self._clean_text(para.Range.Text)
+                    page_num = para.Range.Information(3)
+
+                    # Get the expected symbols for this bullet level
+                    expected_symbols = EXPECTED_BULLETS.get(level, [])
+                    if bullet_symbol_ascii not in expected_symbols:
+                        bullet_points.append({
+                            "error_type": "Incorrect bullet symbol",
+                            "page": page_num,
+                            "text": text,
+                            "incorrect_symbol": f'{bullet_symbol_ascii} (ASCII: {ascii_value if ascii_value is not None else "Not available"})',
+                            "level": level,
+                            "expected_symbol": f'{expected_symbols} (ASCII: {[ord(symbol) for symbol in expected_symbols if symbol]})'
                         })
-                        
-                except Exception as e:
-                    continue
-            
-            self.results['bullets'] = bullets
-            
+
+            self.results['bullets'] = bullet_points
+
         except Exception as e:
             print(f"Error extracting bullets: {str(e)}")
             self.results['bullets'] = []
@@ -241,12 +341,11 @@ class UnifiedDocxExtractor:
                 except Exception:
                     pass
             pythoncom.CoUninitialize()
-    
-    
 
+    
 
     def _extract_content_chunks(self):
-        """Extract content chunks with better filtering"""
+        """Extract content c    hunks with better filtering"""
         pythoncom.CoInitialize()
         word = None
         doc = None
